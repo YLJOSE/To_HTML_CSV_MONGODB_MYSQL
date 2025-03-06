@@ -29,7 +29,7 @@ public class HTMLGestor {
     }
 
     public static void guardarEnArchivoHTML(String htmlContent) {
-        String filePath = "C:\\Users\\juanc\\Downloads\\Examen2DOTrimestreJuanJo\\Examen2DOTrimestreJuanJo\\personas.html";
+        String filePath = "palabras.html";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             // Escribir el contenido HTML en el archivo

@@ -29,6 +29,7 @@ public class MysQLDBGestor {
 
     public List<Departamentos> obtenerDatos() {
         String consulta = "select * from departments;";
+        String nuevaConsulta = "select count(department_id) from departments;";
         List<Departamentos> departamentosList = new ArrayList<>();
         try (PreparedStatement stmt = connection.prepareStatement(consulta)) {
 
