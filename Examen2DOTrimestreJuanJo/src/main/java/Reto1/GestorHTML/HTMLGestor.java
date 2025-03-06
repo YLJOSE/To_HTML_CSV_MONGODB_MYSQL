@@ -3,28 +3,21 @@ package Reto1.GestorHTML;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.HashMap;
 
 public class HTMLGestor {
 
-    public static void generarTablaHTML(List<String> palabras) {
+    public static void generarTablaHTML( HashMap<String,Integer> conteoPalabras) {
 
         StringBuilder sb = new StringBuilder();
 
         // Crear la tabla HTML
         sb.append("<table border='1'>");
         sb.append("<tr><th>Palabra</th><th>Nº veces que aparece</th></tr>");
-        for (int i = 0; i < palabras.size(); i++) {
-            int contador = 0;
+        for (String key : conteoPalabras.keySet()) {
             sb.append("<tr>");
-            sb.append("<td>").append(palabras.get(i)).append("</td>");
-            for (int j = 0; j < palabras.size(); j++) {
-
-                if (palabras.get(i).equalsIgnoreCase(palabras.get(j))) {
-                    contador++;
-                }
-            }
-            sb.append("<td>").append(contador).append("</td>");
+            sb.append("<td>").append(key).append("</td>");
+            sb.append("<td>").append(conteoPalabras.get(key)).append("</td>");
 
         }
 
@@ -36,7 +29,7 @@ public class HTMLGestor {
     }
 
     public static void guardarEnArchivoHTML(String htmlContent) {
-        String filePath = "personas.html";
+        String filePath = "C:\\Users\\juanc\\Downloads\\Examen2DOTrimestreJuanJo\\Examen2DOTrimestreJuanJo\\personas.html";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             // Escribir el contenido HTML en el archivo

@@ -10,12 +10,7 @@ public class Pruebas {
         GestorCSV gestor = new GestorCSV();
         List<String> listaPalabras = gestor.leerCSV();
 
+        HTMLGestor.generarTablaHTML(PreparadorDeDatos.datosAHTML(listaPalabras));
 
-        for (String palabra : listaPalabras) {
-
-            System.out.println(palabra);
-        }
-
-        HTMLGestor.generarTablaHTML(listaPalabras);
     }
 }
