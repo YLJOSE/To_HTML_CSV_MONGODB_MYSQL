@@ -1,0 +1,35 @@
+Ficheros de Texto:
+
+Lectura de un archivo línea por línea:
+Escribe un programa que lea un archivo de texto e imprima su contenido línea por línea en la consola.*
+
+Copiar contenido de un archivo a otro:
+Crea un programa que lea un archivo de texto y copie su contenido a otro archivo nuevo.*
+
+Contar palabras y líneas en un archivo:
+Escribe un programa que cuente cuántas palabras y líneas tiene un archivo de texto.*
+
+Buscar y reemplazar texto en un archivo:
+Diseña un programa que busque una palabra específica en un archivo de texto y la reemplace por otra.
+
+Ordenar líneas de un archivo y guardar el resultado:
+Crea un programa que lea todas las líneas de un archivo de texto,
+las ordene alfabéticamente y guarde el resultado en un nuevo archivo.
+
+Ficheros Binarios
+
+Guardar y leer un objeto en un archivo binario:
+Implementa un programa que serialice un objeto (por ejemplo, una clase Persona)
+ y lo guarde en un archivo binario, luego léelo y muéstralo en consola.
+
+Copiar un archivo binario:
+Escribe un programa que copie un archivo binario, como una imagen o un archivo PDF.
+
+Dividir un archivo binario en partes más pequeñas:
+Crea un programa que tome un archivo binario grande y lo divida en varios archivos más pequeños.
+
+Fusionar varios archivos binarios en uno solo:
+Escribe un programa que tome varios archivos binarios pequeños y los combine en un único archivo más grande.
+
+Comparar dos archivos binarios:
+Diseña un programa que compare dos archivos binarios byte a byte y determine si son idénticos o tienen diferencias.
