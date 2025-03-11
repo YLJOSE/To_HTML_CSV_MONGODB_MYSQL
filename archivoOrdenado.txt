@@ -1,0 +1,4 @@
+Ahora veremos esto:
+Buenos dias.
+Lectura de un archivo línea por línea:
+write un programa que haga algo pe causa!!.

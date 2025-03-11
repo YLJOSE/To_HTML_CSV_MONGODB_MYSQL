@@ -1,9 +1,6 @@
 package Practicas.EjercicioCuatro.GestorFichero;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,12 +14,14 @@ public class GestorFicheroCuatro {
     }
 
     public void reemplazarPalabra(String palabraBuscar, String palabraReemplazar) {
-        leer(palabraBuscar, palabraReemplazar);
+
+        StringBuilder sb = leer(palabraBuscar, palabraReemplazar);
+        escribir(sb);
 
     }
 
 
-    public void leer(String buscar, String remp) {
+    private StringBuilder leer(String buscar, String remp) {
         String linea;
         StringBuilder sb = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader(this.ruta))) {
@@ -30,19 +29,25 @@ public class GestorFicheroCuatro {
 
             while (linea != null) {
 
-               String nueva = Arrays.toString(linea.split(" ")).replaceAll(buscar,remp);
-
-
-                sb.append(nueva);
+                String a = (Arrays.toString(linea.split(" ")).replaceAll(buscar, remp));
+                sb.append(a.replace("[", "").replace("]", "").replace(",", ""));
                 linea = br.readLine();
             }
+            System.out.println(sb);
+            return sb;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(sb);
+
     }
 
-    public void escribir(String palabra) {
+    private void escribir(StringBuilder sb) {
+        try (FileWriter fw = new FileWriter(this.ruta)) {
+            fw.write(String.valueOf(sb));
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
